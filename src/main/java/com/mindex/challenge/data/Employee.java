@@ -1,5 +1,6 @@
 package com.mindex.challenge.data;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Employee {
@@ -54,7 +55,7 @@ public class Employee {
     }
 
     public List<Employee> getDirectReports() {
-        return directReports;
+        return directReports == null ? Collections.emptyList() : directReports; // protect against null lists
     }
 
     public void setDirectReports(List<Employee> directReports) {
